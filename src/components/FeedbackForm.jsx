@@ -1,12 +1,12 @@
 import { useState, useContext, useEffect } from "react";
+import RatingSelect from "./RatingSelect";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
-import RatingSelect from "./RatingSelect";
 import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackForm() {
   const [text, setText] = useState("");
-  const [rating, setRating] = useState("10");
+  const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
@@ -70,6 +70,7 @@ function FeedbackForm() {
             Send
           </Button>
         </div>
+
         {message && <div className="message">{message}</div>}
       </form>
     </Card>
